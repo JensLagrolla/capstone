@@ -329,20 +329,20 @@
     opacity: 0.5;
   }
   body main section#card-2 article#right-side .first-image img {
-    content: url("/resources/capstone_colmar_assets/images/information-orientation.jpg");
+    content: url("resources/capstone_colmar_assets/images/information-orientation.jpg");
     height: auto;
     width: 35%;
     margin-left: 16px;
   }
   body main section#card-2 article#right-side .second-image img {
-    content: url("/resources/capstone_colmar_assets/images/information-campus.jpg");
+    content: url("resources/capstone_colmar_assets/images/information-campus.jpg");
     height: auto;
     width: 35%;
     margin-left: 16px;
     margin-top: 16px;
   }
   body main section#card-2 article#right-side .last-image img {
-    content: url("/resources/capstone_colmar_assets/images/information-guest-lecture.jpg");
+    content: url("resources/capstone_colmar_assets/images/information-guest-lecture.jpg");
     height: auto;
     width: 35%;
     margin-left: 16px;

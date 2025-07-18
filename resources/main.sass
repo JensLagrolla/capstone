@@ -74,8 +74,9 @@
     $left-side-video-margin-bottom: 24px
 
     // Foooter
-    $ul-display: none
     $small-margin-top-bottom-left: 16px
+    // terms-privacy
+    $footer-terms-privacy-display: none 
 
     // Card-2 Images
     %mini-first-image
@@ -222,10 +223,10 @@
             margin-top: $small-margin-top-bottom-left
             margin-bottom: $small-margin-top-bottom-left
             margin-left: $small-margin-top-bottom-left
-            ul
-                display: $ul-display
+            #terms-privacy
+                display: $footer-terms-privacy-display
                 
-@media only screen and (min-width: 1024px) and (max-width: 1600px)
+@media only screen and (min-width: 1000px) and (max-width: 2000px)
     // Desktop and Mobile
     $mobile-mode-display: none
     $desktop-mode-display: flex 

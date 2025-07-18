@@ -253,6 +253,7 @@
     $header-colmar-icon-h1-font-size: 32px 
     $header-colmar-icon-span-opacity: 0.5
     $header-colmar-icon-span-font-weight: lighter 
+    $header-colmar-icon-img-width: 60% 
     //Header nav ul li
     $header-nav-ul-li-display: inline-flex
     $header-nav-ul-list-style-type: none 
@@ -490,6 +491,8 @@
                 justify-content: $desktop-mode-justify-content
                 #colmar-icon
                     display: $desktop-mode-display
+                    img 
+                        width: $header-colmar-icon-img-width
                     h1
                         span#colmar
                             opacity: $header-colmar-icon-span-opacity
@@ -572,14 +575,14 @@
                             @extend %link-style-2
                     .first-image
                         img
-                            content: url("resources/capstone_colmar_assets/images/information-orientation.jpg")
+                            content: url("/resources/capstone_colmar_assets/images/information-orientation.jpg")
                             height: $card-2-right-side-img-height
                             width: $card-2-right-side-img-width
                             margin-left: $card-2-right-side-img-margin-top-left
                             @extend %mini-first-image-2
                     .second-image
                         img
-                            content: url("resources/capstone_colmar_assets/images/information-campus.jpg")
+                            content: url("/resources/capstone_colmar_assets/images/information-campus.jpg")
                             height: $card-2-right-side-img-height
                             width: $card-2-right-side-img-width
                             margin-left: $card-2-right-side-img-margin-top-left
@@ -587,7 +590,7 @@
                             @extend %mini-second-image-2
                     .last-image
                         img
-                            content: url("resources/capstone_colmar_assets/images/information-guest-lecture.jpg")
+                            content: url("/resources/capstone_colmar_assets/images/information-guest-lecture.jpg")
                             height: $card-2-right-side-img-height
                             width: $card-2-right-side-img-width
                             margin-left: $card-2-right-side-img-margin-top-left

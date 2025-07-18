@@ -1,0 +1,704 @@
+@media only screen and (min-width: 300px) and (max-width: 1000px)
+    // Desktop and Mobile
+    $mobile-mode-display: inline-flex
+    $desktop-mode-display: none
+
+    //Body Specs
+    $body-width: 100%
+    $margin: 0
+    $padding: 0
+    $font-family: Verdana, sans-serif
+    $box-sizing: border-box
+
+    // Horizontal Line
+    $hr-opacity: 0.5
+    $hr-display: none 
+
+    // Header Specs
+    $header-justify-content: space-around
+    $header-align-content: center
+    $header-align-items: center
+    $header-height: 64px
+    $logos-width-height: 100%
+
+    // Main Specs
+    // Card-1
+    $card-1-img-width: 100%
+    $card-1-article-margin-left: 16px
+    $card-1-h1-font-size: 2rem
+    $card-1-h1-width: 80%
+    $card-1-h1-margin-top-bottom: 32px
+    $card-1-p-font-size: 1.5rem
+    $card-1-p-margin-bottom: 24px
+    $card-1-p-width: 80%
+    $card-1-button-font-size: 1.3rem
+    $card-1-button-margin-bottom: 32px
+    $card-1-button-background-color: gray
+    $card-1-button-border: transparent
+    $card-1-button-padding: 20px 10px
+    $card-1-button-width: 90%
+    $card-1-button-color: white
+    $card-1-article-background-color: lightgray
+    // Card-2
+    $left-side-display: none
+    $first-image-margin-top: 16px
+    $mini-cards-source-margin-left: 16px
+    $mini-cards-text-1-margin-left: 16px 
+    $mini-cards-margin-bottom: 64px 
+    $special-margin-bottom: 32px
+    $special-p-width: 70%
+    // Card-3
+    $header-h1-margin-top: 32px
+    $header-h1-margin-bottom: 16px
+    $header-h1-font-size: 2rem
+    $header-h1-text-align: center
+    $section-text-2-margin-left: 16px
+    $course-img-p-desc-display: none
+    $course-h2-background-color: lightgray
+    $course-h2-font-weight: normal
+    $course-h2-padding-left: 16px
+    $course-h2-padding-top: 16px
+    $course-h2-padding-bottom: 24px
+    $course-h2-width: 90%
+    $course-margin-bottom: 8px
+    $mobile-only-2-margin-bottom: 32px
+    // Card-4
+    // $header-h1-margin-top: 32px
+    // $header-h1-margin-bottom: 16px
+    $right-side-display: none
+    $exhibit-text-display: none
+    $card-4-header-margin-top: 32px
+    $card-4-header-text-align: center
+    $card-4-header-margin-bottom: 16px
+    $left-side-video-width: 100%
+    $left-side-video-margin-bottom: 24px
+
+    // Foooter
+    $ul-display: none
+    $small-margin-top-bottom-left: 16px
+
+    // Card-2 Images
+    %mini-first-image
+        max-width: 90%
+        object-fit: contain
+
+    %mini-second-image
+        max-width: 90%
+        object-fit: cover
+    
+    %mini-last-image
+        max-width: 90%
+        object-fit: cover
+
+    // Card-2 Link Styles
+    %link-style
+        text-decoration: none
+        color: blue
+
+    :root
+        font-size: 16px
+
+    body
+        width: $body-width
+        margin: $margin
+        padding: $padding
+        font-family: $font-family
+        box-sizing: $box-sizing
+        hr#first-line
+            opacity: $hr-opacity
+        hr#second-line 
+            opacity: $hr-opacity
+        hr#third-line 
+            display: $hr-display
+        header#top
+            section#mobile-mode
+                height: $header-height
+                #logos
+                    width: $logos-width-height
+                    display: $mobile-mode-display
+                    height: $logos-width-height
+                    justify-content: $header-justify-content
+                    align-content: $header-align-content
+                    align-items: $header-align-items
+            section#desktop-mode
+                display: $desktop-mode-display
+        main  
+            section#card-1
+                background-color: $card-1-article-background-color
+                img
+                    width: $card-1-img-width         
+                article
+                    margin-left: $card-1-article-margin-left
+                    h1
+                        font-size: $card-1-h1-font-size
+                        width: $card-1-h1-width
+                        margin-top: $card-1-h1-margin-top-bottom
+                        margin-bottom: $card-1-h1-margin-top-bottom                
+                    p
+                        margin-bottom: $card-1-p-margin-bottom
+                        width: $card-1-p-width
+                        font-size: $card-1-p-font-size
+                    button
+                        margin-bottom: $card-1-button-margin-bottom
+                        background-color: $card-1-button-background-color
+                        border: $card-1-button-border
+                        padding: $card-1-button-padding
+                        width: $card-1-button-width
+                        color: $card-1-button-color
+                        font-size: $card-1-button-font-size
+            section#card-2
+                #left-side
+                    display: $left-side-display
+                #right-side                      
+                    .mini-cards 
+                        margin-left: $mini-cards-source-margin-left
+                    .text-1
+                        margin-left: $mini-cards-text-1-margin-left
+                        a
+                            @extend %link-style
+                    .margin-bottom-only
+                        margin-bottom: $mini-cards-margin-bottom
+                    .special-bottom
+                        margin-bottom: $special-margin-bottom
+                        p
+                            width: $special-p-width
+                    .first-image
+                        img
+                            margin-top: $first-image-margin-top
+                            content: url("/resources/capstone_colmar_assets/images/information-orientation-mobile.jpg")
+                            @extend %mini-first-image
+                    .second-image
+                        img
+                            content: url("/resources/capstone_colmar_assets/images/information-campus-mobile.jpg")
+                            @extend %mini-second-image
+                    .last-image
+                        img
+                            content: url("/resources/capstone_colmar_assets/images/information-guest-lecture-mobile.jpg")
+                            @extend %mini-last-image
+            section#card-3
+                header
+                    h1
+                        margin-top: $header-h1-margin-top
+                        margin-bottom: $header-h1-margin-bottom
+                        font-size: $header-h1-font-size
+                        text-align: $header-h1-text-align
+                article#courses
+                    div.course
+                        img
+                            display: $course-img-p-desc-display
+                        section.text-2 
+                            margin-left: $section-text-2-margin-left
+                            h2
+                                background-color: $course-h2-background-color
+                                font-weight: $course-h2-font-weight
+                                padding-left: $course-h2-padding-left
+                                padding-top: $course-h2-padding-top
+                                padding-bottom: $course-h2-padding-bottom
+                                margin-bottom: $course-margin-bottom
+                                width: $course-h2-width
+                            p
+                                display: $course-img-p-desc-display
+                            p.desc
+                                display: $course-img-p-desc-display
+                    div.mobile-only-2 
+                        margin-bottom: $mobile-only-2-margin-bottom
+            section#card-4
+                header
+                    h1
+                        margin-top: $card-4-header-margin-top
+                        text-align: $card-4-header-text-align
+                        font-size: $header-h1-font-size
+                        margin-bottom: $card-4-header-margin-bottom
+                article#exhibit
+                    aside#left-side
+                        video
+                            width: $left-side-video-width
+                            margin-bottom: $left-side-video-margin-bottom
+                        #exhibit-text
+                            display: $exhibit-text-display
+                    aside#right-side
+                        display: $right-side-display
+        footer
+            margin-top: $small-margin-top-bottom-left
+            margin-bottom: $small-margin-top-bottom-left
+            margin-left: $small-margin-top-bottom-left
+            ul
+                display: $ul-display
+                
+@media only screen and (min-width: 1024px) and (max-width: 1600px)
+    // Desktop and Mobile
+    $mobile-mode-display: none
+    $desktop-mode-display: flex 
+    $desktop-mode-flex-direction: row
+    $desktop-mode-justify-content: space-between
+
+    //Body 
+    $font-family: Verdana, sans-serif 
+    $margin: 0
+    $padding: 0
+    $box-sizing: border-box 
+    $width: 100%
+
+    //Horizontal Line
+    $hr-opacity: 0.5 
+    $hr-display: none 
+    //Horizontal Line Third Line 
+    $hr-third-line-margin-bottom: 16px 
+
+    //Header#top
+    $header-top-margin-left-right: 24px
+    $header-top-height: 64px
+    //Header colmar-icon
+    $header-colmar-icon-h1-font-size: 32px 
+    $header-colmar-icon-span-opacity: 0.5
+    $header-colmar-icon-span-font-weight: lighter 
+    //Header nav ul li
+    $header-nav-ul-li-display: inline-flex
+    $header-nav-ul-list-style-type: none 
+    $header-nav-ul-a-color: black 
+    $header-nav-ul-a-text-decoration: none 
+    $header-nav-margin-right: 16px
+    $header-nav-align-content: center
+
+    //Main
+    //section#card-1
+    $card-1-display: flex 
+    $card-1-flex-direction: row 
+    $card-1-background-color: lightgray
+
+    //img
+    $card-1-img-margin: 32px 24px 
+    $card-1-img-width: 60%
+    
+    //article 
+    //h1
+    $card-1-article-h1-color: black
+    $card-1-article-h1-font-size: 2rem  
+
+    //p
+    $card-1-article-p-color: gray
+    $card-1-article-p-font-size: 1rem 
+
+    //button
+    $card-1-article-button-padding-top-bottom: 8px 
+    $card-1-article-button-background-color: darkgray 
+    $card-1-article-button-color: white 
+    $card-1-article-button-font-size: 1rem 
+    $card-1-article-button-margin-top: 1.5rem 
+    $card-1-article-button-border: transparent
+    $card-1-article-button-width: 80%
+
+    //section#card-2
+    $card-2-display: grid 
+    $card-2-grid-template: 1fr / 1fr 40%
+    $card-2-margin-top-bottom: 32px 
+    $card-2-margin-left: 24px 
+
+    //article#left-side
+    $card-2-left-side-grid-area: 1 / 1 / span 1 / span 1
+    $card-2-left-side-width: 100%
+    //img
+    $card-2-left-side-img-width: 90%
+    $card-2-left-side-img-margin-right: 24px
+    $card-2-left-side-img-margin-bottom: 32px
+
+    //aside
+    //h1
+    $card-2-aside-h1-font-size: 2rem 
+    $card-2-aside-h1-margin-bottom: 24px
+    //p
+    $card-2-aside-p-opacity: 0.5
+    $card-2-aside-p-margin-bottom: 32px
+    $card-2-aside-p-width: 80%
+    //p#left-side-source
+    $card-2-aside-p-left-side-source-font-size: 0.8rem
+    
+    //article#right-side
+    $card-2-right-side-grid-area: 1 / 2 / span 1 / span 1
+    $card-2-right-side-display: inline-flex 
+    $card-2-right-side-flex-direction: column 
+    $card-2-right-side-width: 40% 
+    //.mini-cards
+    $card-2-mini-cards-display: flex
+    $card-2-mini-cards-pseudo-hover-background-color: lightgray
+    //img
+    $card-2-right-side-img-height: auto 
+    $card-2-right-side-img-width: 35%  
+    $card-2-right-side-img-margin-top-left: 16px 
+    //.text-1
+    $card-2-right-side-text-1-margin-left: 16px
+    $card-2-right-side-text-1-justify-self: center
+    $card-2-right-side-text-1-align-self: center 
+    // .special-bottom
+    $card-2-right-side-special-bottom-width: 80%
+    //h2
+    $card-2-right-side-text-1-h2-p-margin-bottom: 8px 
+    //p
+    $card-2-right-side-text-1-h2-p-margin-bottom: 8px
+    $card-2-right-side-text-1-h2-p-opacity: 0.5
+    
+    //section#card-3
+    $card-3-margin-top: 32px 
+    $card-3-background-color: lightgray
+    //header
+    //h1
+    // %header-h1-card-3
+    //article#courses
+    $card-3-courses-margin-left-right: 72px
+    $card-3-courses-display: grid 
+    $card-3-courses-grid-template: repeat(2, 1fr) / repeat(3, 1fr)
+    $card-3-courses-grid-auto-flow: row dense 
+    $card-3-courses-grid-auto-rows: 1fr 
+    $card-3-courses-grid-auto-columns: 1fr 
+    $card-3-grid-gap: 32px 24px 
+    //.course
+    //img
+    $card-3-course-img-height: auto 
+    $card-3-course-img-width: 100%
+
+    //.text-2
+    $card-3-course-text-2-margin-left: 16px 
+    $card-3-course-text-2-width: 80%
+    $card-3-course-pseudo-hover-background-color: white 
+    $card-3-course-text-2-font-size: 1.2rem
+    // .special
+    $card-3-course-special-width: 80%
+    //h2
+    $card-3-course-text-2-h2-margin-top: 16px 
+    $card-3-course-text-2-h2-margin-bottom: 8px 
+    //p
+    $card-3-course-text-2-h2-p-margin-bottom: 8px 
+    $card-3-course-text-2-p-p-desc-opacity: 0.5 
+    //p.desc
+    $card-3-course-text-2-p-desc-margin-bottom: 24px 
+    
+    //section#card-4
+    //header
+    //h1
+    // %header-h1-card-4
+    //article#exhibit
+    $card-4-display: grid 
+    $card-4-grid-template: 1fr / 1fr 40%
+    //aside#left-side
+    $card-4-left-side-grid-area: 1 / 1 / span 1 / span 1
+    $card-4-left-side-margin-left-right: 24px 
+    //video
+    $card-4-left-side-video-width: 100%
+    $card-4-left-side-video-margin-bottom: 24px 
+
+    //#exhibit-text
+    //h2
+    $card-4-exhibit-text-h2-margin-bottom: 8px 
+    //p
+    $card-4-exhibit-text-p-margin-bottom: 32px 
+    $card-4-exhibit-text-p-width: 90%
+    $card-4-exhibit-text-p-opacity: 0.5 
+    //aside#right-side
+    $card-4-right-side-grid-area: 1 / 2 / span 1 / span 1 
+    $card-4-right-side-width: 100%
+    //.mini-cards
+    $card-4-right-side-display: flex 
+    $card-4-right-side-flex-direction: row 
+    $card-4-right-side-mini-cards-width: 90%
+    $card-4-right-side-pseudo-hover-background-color: lightgray
+    //img
+    $card-4-right-side-mini-cards-img-margin: 16px 
+    $card-4-right-side-mini-cards-img-height: auto 
+    $card-4-right-side-mini-cards-img-width: 35% 
+    //.text-3
+    $card-4-right-side-text-3-margin-left: 16px 
+    $card-4-right-side-text-3-justify-self: center 
+    $card-4-right-side-text-3-align-self: center 
+    //h2
+    //p
+    $card-4-right-side-text-3-p-opacity: 0.5 
+
+    //footer
+    $footer-margin-left: 24px 
+    $footer-display: flex 
+    $footer-flex-direction: row 
+    $footer-justify-content: space-between
+    $footer-margin-bottom: 5%
+    //small
+    $footer-small-color: gray
+    //#terms-privacy 
+    $footer-terms-privacy-display: flex
+    //tp small
+    $footer-terms-privacy-small-margin-right: 16px 
+
+    // Header h1 in Card-3 and Card-4
+    %header-h1-card-3
+        text-align: center 
+        font-size: 2rem 
+        margin-bottom: 32px 
+        padding-top: 32px
+    %header-h1-card-4
+        text-align: center 
+        font-size: 2rem 
+        margin-top: 32px 
+        margin-bottom: 32px 
+
+    // Card-2 Images
+    %mini-first-image-2
+        max-width: 90%
+        object-fit: contain
+
+    %mini-second-image-2
+        max-width: 90%
+        object-fit: cover
+    
+    %mini-last-image-2
+        max-width: 90%
+        object-fit: cover
+    
+    // Card-2 Hyperlinks
+    %link-style-2
+        text-decoration: none
+        color: indigo
+    
+    // Footer Hyperlinks
+    %link-style-3 
+        text-decoration: none 
+        color: gray  
+    
+    :root
+        font-size: 16px
+
+    body 
+        width: $width
+        margin: $margin
+        padding: $padding
+        font-family: $font-family
+        box-sizing: $box-sizing
+        hr#first-line
+            display: $hr-display
+        hr#second-line
+            display: $hr-display
+        hr#third-line
+            opacity: $hr-opacity
+            margin-bottom: $hr-third-line-margin-bottom
+        section#mobile-mode
+            display: $mobile-mode-display
+        header#top
+            height: $header-top-height
+            margin-left: $header-top-margin-left-right
+            margin-right: $header-top-margin-left-right
+            section#desktop-mode 
+                display: $desktop-mode-display
+                flex-direction: $desktop-mode-flex-direction
+                justify-content: $desktop-mode-justify-content
+                #colmar-icon
+                    display: $desktop-mode-display
+                    h1
+                        span#colmar
+                            opacity: $header-colmar-icon-span-opacity
+                            font-weight: $header-colmar-icon-span-font-weight
+                nav
+                    align-content: $header-nav-align-content
+                    ul
+                        list-style-type: $header-nav-ul-list-style-type
+                        li.ul-marked
+                            margin-right: $header-nav-margin-right
+                        li
+                            display: $header-nav-ul-li-display
+                            a
+                                color: $header-nav-ul-a-color
+                                text-decoration: $header-nav-ul-a-text-decoration
+        main 
+            section#card-1
+                display: $card-1-display
+                flex-direction: $card-1-flex-direction
+                background-color: $card-1-background-color
+                img
+                    margin: $card-1-img-margin
+                    width: $card-1-img-width
+                article
+                    align-self: center
+                    h1
+                        font-size: $card-1-article-h1-font-size
+                        color: $card-1-article-h1-color
+                    p
+                        font-size: $card-1-article-p-font-size
+                        color: $card-1-article-p-color
+                    button
+                        padding-top: $card-1-article-button-padding-top-bottom
+                        padding-bottom: $card-1-article-button-padding-top-bottom
+                        color: $card-1-article-button-color
+                        background-color: $card-1-article-button-background-color
+                        font-size: $card-1-article-button-font-size
+                        width: $card-1-article-button-width
+                        border: $card-1-article-button-border
+                        margin-top: $card-1-article-button-margin-top
+            section#card-2
+                display: $card-2-display
+                grid-template: $card-2-grid-template
+                margin-top: $card-2-margin-top-bottom
+                margin-bottom: $card-2-margin-top-bottom
+                margin-left: $card-2-margin-left
+                article#left-side 
+                    grid-area: $card-2-left-side-grid-area
+                    width: $card-2-left-side-width
+                    img
+                        width: $card-2-left-side-img-width
+                        margin-right: $card-2-left-side-img-margin-right
+                        margin-bottom: $card-2-left-side-img-margin-bottom
+                    aside
+                        h1
+                            font-size: $card-2-aside-h1-font-size
+                            margin-bottom: $card-2-aside-h1-margin-bottom
+                        p 
+                            opacity: $card-2-aside-p-opacity
+                            margin-bottom: $card-2-aside-p-margin-bottom
+                            width: $card-2-aside-p-width
+                        p#left-side-source 
+                            font-size: $card-2-aside-p-left-side-source-font-size
+                article#right-side 
+                    grid-area: $card-2-right-side-grid-area
+                    .mini-cards
+                        display: $card-2-mini-cards-display
+                        &:hover
+                            background-color: $card-2-mini-cards-pseudo-hover-background-color
+                    .text-1
+                        justify-self: $card-2-right-side-text-1-justify-self
+                        align-self: $card-2-right-side-text-1-justify-self
+                        margin-left: $card-2-right-side-text-1-margin-left
+                        h2
+                            margin-bottom: $card-2-right-side-text-1-h2-p-margin-bottom
+                        p
+                            margin-bottom: $card-2-right-side-text-1-h2-p-margin-bottom
+                            opacity: $card-2-right-side-text-1-h2-p-opacity
+                        a
+                            @extend %link-style-2
+                    .first-image
+                        img
+                            content: url("/resources/capstone_colmar_assets/images/information-orientation.jpg")
+                            height: $card-2-right-side-img-height
+                            width: $card-2-right-side-img-width
+                            margin-left: $card-2-right-side-img-margin-top-left
+                            @extend %mini-first-image-2
+                    .second-image
+                        img
+                            content: url("/resources/capstone_colmar_assets/images/information-campus.jpg")
+                            height: $card-2-right-side-img-height
+                            width: $card-2-right-side-img-width
+                            margin-left: $card-2-right-side-img-margin-top-left
+                            margin-top: $card-2-right-side-img-margin-top-left
+                            @extend %mini-second-image-2
+                    .last-image
+                        img
+                            content: url("/resources/capstone_colmar_assets/images/information-guest-lecture.jpg")
+                            height: $card-2-right-side-img-height
+                            width: $card-2-right-side-img-width
+                            margin-left: $card-2-right-side-img-margin-top-left
+                            margin-top: $card-2-right-side-img-margin-top-left
+                            @extend %mini-last-image-2
+                    .special-bottom
+                        p
+                            width: $card-2-right-side-special-bottom-width
+            section#card-3
+                background-color: $card-3-background-color
+                header
+                    h1 
+                        @extend %header-h1-card-3
+                #courses
+                    margin-left: $card-3-courses-margin-left-right
+                    margin-right: $card-3-courses-margin-left-right
+                    display: $card-3-courses-display
+                    grid-template: $card-3-courses-grid-template
+                    grid-auto-flow: $card-3-courses-grid-auto-flow
+                    grid-auto-rows: $card-3-courses-grid-auto-rows
+                    grid-auto-columns: $card-3-courses-grid-auto-columns 
+                    gap: $card-3-grid-gap 
+                    .course 
+                        &:hover
+                            background-color: $card-3-course-pseudo-hover-background-color
+                        img 
+                            height: $card-3-course-img-height
+                            width: $card-3-course-img-width
+                        .text-2 
+                            margin-left: $card-3-course-text-2-margin-left
+                            width: $card-3-course-text-2-width
+                            font-size: $card-3-course-text-2-font-size
+                            h2 
+                                margin-top: $card-3-course-text-2-h2-margin-top
+                                margin-bottom: $card-3-course-text-2-h2-margin-bottom
+                            p 
+                                margin-bottom: $card-3-course-text-2-h2-p-margin-bottom
+                                opacity: $card-3-course-text-2-p-p-desc-opacity
+                            p.desc 
+                                margin-bottom: $card-3-course-text-2-p-desc-margin-bottom
+                                opacity: $card-3-course-text-2-p-p-desc-opacity
+                        .special
+                            width: $card-3-course-special-width
+            section#card-4
+                header
+                    h1 
+                        @extend %header-h1-card-4
+                #exhibit 
+                    display: $card-4-display
+                    grid-template: 1fr / 1fr 40%
+                    aside#left-side 
+                        grid-area: $card-4-left-side-grid-area
+                        margin-left: $card-4-left-side-margin-left-right
+                        margin-right: $card-4-left-side-margin-left-right
+                        video
+                            width: $card-4-left-side-video-width
+                            margin-bottom: $card-4-left-side-video-margin-bottom
+                        #exhibit-text
+                            h2 
+                                margin-bottom: $card-4-exhibit-text-h2-margin-bottom
+                            p 
+                                margin-bottom: $card-4-exhibit-text-p-margin-bottom
+                                width: $card-4-exhibit-text-p-width
+                                opacity: $card-4-exhibit-text-p-opacity
+                    aside#right-side 
+                        grid-area: $card-4-right-side-grid-area
+                        width: $card-4-right-side-width 
+                        .mini-cards 
+                            display: $card-4-right-side-display
+                            flex-direction: $card-4-right-side-flex-direction
+                            width: $card-4-right-side-mini-cards-width
+                            &:hover 
+                                background-color: $card-4-right-side-pseudo-hover-background-color
+                            img  
+                                margin: $card-4-right-side-mini-cards-img-margin 
+                                height: $card-4-right-side-mini-cards-img-height 
+                                width: $card-4-right-side-mini-cards-img-width
+                            .text-3 
+                                justify-self: $card-4-right-side-text-3-justify-self
+                                align-self: $card-4-right-side-text-3-align-self
+                                margin-left: $card-4-right-side-text-3-margin-left
+                                p 
+                                    opacity: $card-4-right-side-text-3-p-opacity
+        footer 
+            margin-left: $footer-margin-left
+            display: $footer-display
+            flex-direction: $footer-flex-direction
+            justify-content: $footer-justify-content
+            margin-bottom: $footer-margin-bottom
+            small 
+                color: $footer-small-color
+            #terms-privacy 
+                display: $footer-terms-privacy-display
+                small 
+                    margin-right: $footer-terms-privacy-small-margin-right
+                    a 
+                        @extend %link-style-3 
+            
+                
+
+
+
+
+                        
+
+                    
+
+
+
+
+                    
+
+
+
+

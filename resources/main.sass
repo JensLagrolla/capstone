@@ -164,18 +164,18 @@
                         p
                             width: $special-p-width
                     .first-image
-                        img
-                            margin-top: $first-image-margin-top
-                            content: url("https://github.com/JensLagrolla/capstone/blob/main/resources/capstone_colmar_assets/images/information-orientation-mobile.jpg")
-                            @extend %mini-first-image
+                        picture
+                            img 
+                                margin-top: $first-image-margin-top
+                                @extend %mini-first-image
                     .second-image
-                        img
-                            content: url("https://github.com/JensLagrolla/capstone/blob/main/resources/capstone_colmar_assets/images/information-campus-mobile.jpg")
-                            @extend %mini-second-image
+                        picture
+                            img 
+                                @extend %mini-second-image
                     .last-image
-                        img
-                            content: url("https://github.com/JensLagrolla/capstone/blob/main/resources/capstone_colmar_assets/images/information-guest-lecture-mobile.jpg")
-                            @extend %mini-last-image
+                        picture
+                            img 
+                                @extend %mini-last-image
             section#card-3
                 header
                     h1
@@ -574,23 +574,20 @@
                         a
                             @extend %link-style-2
                     .first-image
-                        img
-                            content: url("https://github.com/JensLagrolla/capstone/blob/main/resources/capstone_colmar_assets/images/information-orientation.jpg")
+                        picture
                             height: $card-2-right-side-img-height
                             width: $card-2-right-side-img-width
                             margin-left: $card-2-right-side-img-margin-top-left
                             @extend %mini-first-image-2
                     .second-image
-                        img
-                            content: url("https://github.com/JensLagrolla/capstone/blob/main/resources/capstone_colmar_assets/images/information-campus.jpg")
+                        picture
                             height: $card-2-right-side-img-height
                             width: $card-2-right-side-img-width
                             margin-left: $card-2-right-side-img-margin-top-left
                             margin-top: $card-2-right-side-img-margin-top-left
                             @extend %mini-second-image-2
                     .last-image
-                        img
-                            content: url("https://github.com/JensLagrolla/capstone/blob/main/resources/capstone_colmar_assets/images/information-guest-lecture.jpg")
+                        picture
                             height: $card-2-right-side-img-height
                             width: $card-2-right-side-img-width
                             margin-left: $card-2-right-side-img-margin-top-left

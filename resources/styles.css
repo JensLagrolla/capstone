@@ -166,25 +166,13 @@
     margin-top: 32px;
     margin-bottom: 32px;
   }
-  body main section#card-2 article#right-side .first-image picture {
-    max-width: 90%;
-    object-fit: contain;
-  }
-  body main section#card-2 article#right-side .second-image picture {
-    max-width: 90%;
-    object-fit: cover;
-  }
-  body main section#card-2 article#right-side .last-image picture {
-    max-width: 90%;
-    object-fit: cover;
-  }
-  body main section#card-2 article#right-side .text-1 a {
-    text-decoration: none;
-    color: indigo;
-  }
   body footer #terms-privacy small a {
     text-decoration: none;
     color: gray;
+  }
+  body main section#card-2 article#right-side .mini-cards .text-1 a {
+    text-decoration: none;
+    color: blue;
   }
   :root {
     font-size: 16px;
@@ -276,18 +264,16 @@
     margin-top: 1.5rem;
   }
   body main section#card-2 {
-    display: grid;
-    grid-template: 1fr/1fr 40%;
+    display: flex;
     margin-top: 32px;
     margin-bottom: 32px;
     margin-left: 24px;
   }
   body main section#card-2 article#left-side {
-    grid-area: 1/1/span 1/span 1;
     width: 100%;
   }
   body main section#card-2 article#left-side img {
-    width: 90%;
+    width: 100%;
     margin-right: 24px;
     margin-bottom: 32px;
   }
@@ -298,51 +284,35 @@
   body main section#card-2 article#left-side aside p {
     opacity: 0.5;
     margin-bottom: 32px;
-    width: 80%;
+    width: 60%;
   }
   body main section#card-2 article#left-side aside p#left-side-source {
     font-size: 0.8rem;
   }
   body main section#card-2 article#right-side {
-    grid-area: 1/2/span 1/span 1;
+    width: 80%;
+    margin-left: 24px;
+  }
+  body main section#card-2 article#right-side .second-image {
+    margin-top: 16px;
+  }
+  body main section#card-2 article#right-side .last-image {
+    margin-top: 16px;
+    margin-bottom: 32px;
   }
   body main section#card-2 article#right-side .mini-cards {
     display: flex;
+    flex-direction: row;
+    align-items: center;
   }
   body main section#card-2 article#right-side .mini-cards:hover {
     background-color: lightgray;
   }
-  body main section#card-2 article#right-side .text-1 {
-    justify-self: center;
-    align-self: center;
+  body main section#card-2 article#right-side .mini-cards .text-1 {
     margin-left: 16px;
   }
-  body main section#card-2 article#right-side .text-1 h2 {
-    margin-bottom: 8px;
-  }
-  body main section#card-2 article#right-side .text-1 p {
-    margin-bottom: 8px;
-    opacity: 0.5;
-  }
-  body main section#card-2 article#right-side .first-image picture {
-    height: auto;
-    width: 35%;
-    margin-left: 16px;
-  }
-  body main section#card-2 article#right-side .second-image picture {
-    height: auto;
-    width: 35%;
-    margin-left: 16px;
-    margin-top: 16px;
-  }
-  body main section#card-2 article#right-side .last-image picture {
-    height: auto;
-    width: 35%;
-    margin-left: 16px;
-    margin-top: 16px;
-  }
-  body main section#card-2 article#right-side .special-bottom p {
-    width: 80%;
+  body main section#card-2 article#right-side .mini-cards .special-bottom p {
+    width: 60%;
   }
   body main section#card-3 {
     background-color: lightgray;

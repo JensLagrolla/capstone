@@ -1,4 +1,4 @@
-@media only screen and (min-width: 300px) and (max-width: 1024px)
+@media only screen and (min-width: 300px) and (max-width: 1000px)
     // Desktop and Mobile
     $mobile-mode-display: inline-flex
     $desktop-mode-display: none
@@ -226,7 +226,7 @@
             #terms-privacy
                 display: $footer-terms-privacy-display
                 
-@media only screen and (min-width: 1024px) and (max-width: 2000px)
+@media only screen and (min-width: 1000px) and (max-width: 2000px)
     // Desktop and Mobile
     $mobile-mode-display: none
     $desktop-mode-display: flex 
@@ -291,16 +291,14 @@
     $card-1-article-button-width: 80%
 
     //section#card-2
-    $card-2-display: grid 
-    $card-2-grid-template: 1fr / 1fr 40%
+    $card-2-display: flex 
     $card-2-margin-top-bottom: 32px 
     $card-2-margin-left: 24px 
 
     //article#left-side
-    $card-2-left-side-grid-area: 1 / 1 / span 1 / span 1
     $card-2-left-side-width: 100%
     //img
-    $card-2-left-side-img-width: 90%
+    $card-2-left-side-img-width: 100%
     $card-2-left-side-img-margin-right: 24px
     $card-2-left-side-img-margin-bottom: 32px
 
@@ -310,34 +308,10 @@
     $card-2-aside-h1-margin-bottom: 24px
     //p
     $card-2-aside-p-opacity: 0.5
-    $card-2-aside-p-margin-bottom: 32px
-    $card-2-aside-p-width: 80%
+    $card-2-aside-p-margin-bottom: 32px 
+    $card-2-aside-p-width: 60%
     //p#left-side-source
     $card-2-aside-p-left-side-source-font-size: 0.8rem
-    
-    //article#right-side
-    $card-2-right-side-grid-area: 1 / 2 / span 1 / span 1
-    $card-2-right-side-display: inline-flex 
-    $card-2-right-side-flex-direction: column 
-    $card-2-right-side-width: 40% 
-    //.mini-cards
-    $card-2-mini-cards-display: flex
-    $card-2-mini-cards-pseudo-hover-background-color: lightgray
-    //img
-    $card-2-right-side-img-height: auto 
-    $card-2-right-side-img-width: 5%  
-    $card-2-right-side-img-margin-top-left: 16px 
-    //.text-1
-    $card-2-right-side-text-1-margin-left: 16px
-    $card-2-right-side-text-1-justify-self: center
-    $card-2-right-side-text-1-align-self: center 
-    // .special-bottom
-    $card-2-right-side-special-bottom-width: 80%
-    //h2
-    $card-2-right-side-text-1-h2-p-margin-bottom: 8px 
-    //p
-    $card-2-right-side-text-1-h2-p-margin-bottom: 8px
-    $card-2-right-side-text-1-h2-p-opacity: 0.5
     
     //section#card-3
     $card-3-margin-top: 32px 
@@ -439,29 +413,15 @@
         font-size: 2rem 
         margin-top: 32px 
         margin-bottom: 32px 
-
-    // Card-2 Images
-    %mini-first-image-2
-        max-width: 90%
-        object-fit: contain
-
-    %mini-second-image-2
-        max-width: 90%
-        object-fit: cover
-    
-    %mini-last-image-2
-        max-width: 90%
-        object-fit: cover
-    
-    // Card-2 Hyperlinks
-    %link-style-2
-        text-decoration: none
-        color: indigo
     
     // Footer Hyperlinks
     %link-style-3 
         text-decoration: none 
         color: gray  
+    
+    %card-2-right-side-hyperlinks 
+        text-decoration: none 
+        color: blue 
     
     :root
         font-size: 16px
@@ -535,12 +495,10 @@
                         margin-top: $card-1-article-button-margin-top
             section#card-2
                 display: $card-2-display
-                grid-template: $card-2-grid-template
                 margin-top: $card-2-margin-top-bottom
                 margin-bottom: $card-2-margin-top-bottom
                 margin-left: $card-2-margin-left
                 article#left-side 
-                    grid-area: $card-2-left-side-grid-area
                     width: $card-2-left-side-width
                     img
                         width: $card-2-left-side-img-width
@@ -557,45 +515,46 @@
                         p#left-side-source 
                             font-size: $card-2-aside-p-left-side-source-font-size
                 article#right-side 
-                    grid-area: $card-2-right-side-grid-area
-                    .mini-cards
-                        display: $card-2-mini-cards-display
-                        &:hover
-                            background-color: $card-2-mini-cards-pseudo-hover-background-color
-                    .text-1
-                        justify-self: $card-2-right-side-text-1-justify-self
-                        align-self: $card-2-right-side-text-1-justify-self
-                        margin-left: $card-2-right-side-text-1-margin-left
-                        h2
-                            margin-bottom: $card-2-right-side-text-1-h2-p-margin-bottom
-                        p
-                            margin-bottom: $card-2-right-side-text-1-h2-p-margin-bottom
-                            opacity: $card-2-right-side-text-1-h2-p-opacity
-                        a
-                            @extend %link-style-2
-                    .first-image
-                        picture
-                            height: $card-2-right-side-img-height
-                            width: $card-2-right-side-img-width
-                            margin-left: $card-2-right-side-img-margin-top-left
-                            @extend %mini-first-image-2
-                    .second-image
-                        picture
-                            height: $card-2-right-side-img-height
-                            width: $card-2-right-side-img-width
-                            margin-left: $card-2-right-side-img-margin-top-left
-                            margin-top: $card-2-right-side-img-margin-top-left
-                            @extend %mini-second-image-2
-                    .last-image
-                        picture
-                            height: $card-2-right-side-img-height
-                            width: $card-2-right-side-img-width
-                            margin-left: $card-2-right-side-img-margin-top-left
-                            margin-top: $card-2-right-side-img-margin-top-left
-                            @extend %mini-last-image-2
-                    .special-bottom
-                        p
-                            width: $card-2-right-side-special-bottom-width
+                    $card-2-right-side-width: 80%
+                    $card-2-right-side-margin-left: 24px 
+
+                    width: $card-2-right-side-width
+                    margin-left: $card-2-right-side-margin-left
+                    .second-image 
+                        $card-2-right-side-second-image-last-image-margin-top: 16px // both in .second-image and .last-image 
+
+                        margin-top: $card-2-right-side-second-image-last-image-margin-top
+                    .last-image  
+                        $card-2-right-side-second-image-last-image-margin-top: 16px 
+                        $card-2-right-side-last-image-margin-bottom: 32px 
+
+                        margin-top: $card-2-right-side-second-image-last-image-margin-top
+                        margin-bottom: $card-2-right-side-last-image-margin-bottom
+                    .mini-cards 
+                        $card-2-right-side-mini-cards-display: flex 
+                        $card-2-right-side-mini-cards-flex-direction: row 
+                        $card-2-right-side-mini-card-align-items: center 
+
+                        display: $card-2-right-side-mini-cards-display
+                        flex-direction: $card-2-right-side-mini-cards-flex-direction
+                        align-items: $card-2-right-side-mini-card-align-items
+                        &:hover 
+                            $mini-cards-hover-background-color: lightgray 
+
+                            background-color: $mini-cards-hover-background-color
+                        .text-1 
+                            $card-2-right-side-mini-cards-text-1-margin-left: 16px 
+
+                            margin-left: $card-2-right-side-mini-cards-text-1-margin-left
+                            a
+                                @extend %card-2-right-side-hyperlinks 
+                        .special-bottom 
+                            p 
+                                $card-2-right-side-mini-cards-special-bottom-p-width: 60%
+
+                                width: $card-2-right-side-mini-cards-special-bottom-p-width
+
+
             section#card-3
                 background-color: $card-3-background-color
                 header

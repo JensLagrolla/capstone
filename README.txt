@@ -1,1 +1,1 @@
-Codecademy Capstone Project
+Codecademy Capstone Project - COMPLETED
